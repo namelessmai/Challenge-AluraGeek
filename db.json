@@ -1,0 +1,58 @@
+{
+  "produtos": [
+    {
+      "nome": "Caneca do Batman",
+      "preco": 10.99,
+      "imagem": "img/batman-caneca.jpg",
+      "id": 1
+    },
+    {
+      "nome": "Nuka-Cola",
+      "preco": 10,
+      "imagem": "img/nuka-cola.jpg",
+      "id": 2
+    },
+    {
+      "nome": "Batom Coringuete",
+      "preco": 10,
+      "imagem": "img/batom-coringa.jpg",
+      "id": 3
+    },
+    {
+      "nome": "1 Sessão de Nail Designer com Voldemort",
+      "preco": 10,
+      "imagem": "img/unhas-voldemort.jpg",
+      "id": 4
+    },
+    {
+      "nome": "Mapa do Maroto",
+      "preco": 10,
+      "imagem": "img/mapa.jpg",
+      "id": 5
+    },
+    {
+      "nome": "Touquinha de dormir <br> do Colosso",
+      "preco": 10,
+      "imagem": "img/touca-do-colosso.jpg",
+      "id": 6
+    },
+    {
+      "nome": "Escova de dente do Superman",
+      "preco": 10,
+      "imagem": "img/escova-superman.jpg",
+      "id": 7
+    },
+    {
+      "nome": "Biscoitos-Scooby",
+      "preco": 10,
+      "imagem": "img/biscoitos-scooby.jpg",
+      "id": 8
+    },
+    {
+      "nome": "Carta de amor do Deadpool",
+      "preco": 10,
+      "imagem": "img/carta-deadpool.jpg",
+      "id": 9
+    }
+  ]
+}
