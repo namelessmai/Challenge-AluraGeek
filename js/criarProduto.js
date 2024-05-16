@@ -1,6 +1,5 @@
 import { conectaApi } from "./conectaApi.js";
-
-conectaApi.listaProdutos();
+import { listaProdutos } from "./mostrarProdutos.js";
 
 const formulario = document.querySelector("[data-formulario]");
 
@@ -14,19 +13,20 @@ async function criarProduto(evento) {
     try {
         await conectaApi.addProduto(nome, preco, imagem);
         alert('Produto cadastrado com sucesso!');
+        limparCampos();
+        await listaProdutos();  // Recarrega a lista de produtos
     } catch (e) {
-        alert(e);
+        alert('Erro ao cadastrar produto. Tente novamente.');
+        console.error(e);
     }
 }
 
-formulario.addEventListener("submit", evento => criarProduto(evento));
+formulario.addEventListener("submit", criarProduto);
 
-// Função para limpar os campos do formulário
 function limparCampos() {
     document.querySelector("[data-nome]").value = "";
     document.querySelector("[data-preco]").value = "";
     document.querySelector("[data-imagem]").value = "";
 }
-
 
 document.querySelector(".limpar").addEventListener("click", limparCampos);
