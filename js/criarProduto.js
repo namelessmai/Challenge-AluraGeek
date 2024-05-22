@@ -14,7 +14,7 @@ async function criarProduto(evento) {
         await conectaApi.addProduto(nome, preco, imagem);
         alert('Produto cadastrado com sucesso!');
         limparCampos();
-        await listaProdutos();  // Recarrega a lista de produtos
+        await listaProdutos();
     } catch (e) {
         alert('Erro ao cadastrar produto. Tente novamente.');
         console.error(e);

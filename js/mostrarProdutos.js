@@ -24,7 +24,7 @@ function constroiCard(nome, preco, imagem, id) {
 
 export async function listaProdutos() {
     try {
-        containerCards.innerHTML = '';  // Limpar a lista antes de recarregar
+        containerCards.innerHTML = '';
         const listaApi = await conectaApi.listaProdutos();
         listaApi.forEach(elemento => {
             const card = constroiCard(elemento.name, elemento.preco, elemento.imagem, elemento.id);
