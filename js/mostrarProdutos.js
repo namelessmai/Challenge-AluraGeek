@@ -24,20 +24,15 @@ function constroiCard(nome, preco, imagem, id) {
 
 export async function listaProdutos() {
     try {
-        containerCards.innerHTML = '';
+        containerCards.innerHTML = '';  // Limpar a lista antes de recarregar
         const listaApi = await conectaApi.listaProdutos();
         listaApi.forEach(elemento => {
             const card = constroiCard(elemento.name, elemento.preco, elemento.imagem, elemento.id);
             containerCards.appendChild(card);
-            card.querySelector(".excluir-produto").addEventListener("click", async () => {
-                try {
-                    await conectaApi.excluirProduto(elemento.id);
-                    containerCards.removeChild(card);
-                    alert("Produto excluído com sucesso!");
-                } catch (error) {
-                    console.error("Erro ao excluir produto:", error);
-                    alert("Erro ao excluir produto. Verifique o console para mais detalhes.");
-                }
+            card.querySelector(".excluir-produto").addEventListener("click", () => {
+                conectaApi.excluirProduto(elemento.id);
+                containerCards.removeChild(card);
+                alert("Produto excluído com sucesso!");
             });
         });
     } catch (error) {
